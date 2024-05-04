@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "ReminderWindows.sln"
+    "dotnet.defaultSolution": "reminder.sln"
 }
