@@ -123,6 +123,20 @@ public class WakeupSchedule{
         return JsonUtility.FromJson<WakeupSchedule>(json);
     }
 
+    //长日期格式，2024年5月4日 第11周 星期六
+    public string ToVeryLongDateColor(DateTime date){
+        return ReminderLib.ToColorText(date.ToLongDateString(),Color.blue)
+        +" "+$"第{ReminderLib.ToColorText(ToWeekN(date).ToString(),Color.cyan)}周"+" "
+        +ReminderLib.ToColorText(date.DayOfWeek.ToString(),Color.magenta);
+    }
+
+    //计算是第几周
+    public int ToWeekN(DateTime date){
+        string[] _date=apparence.startDate.Split('-');
+        DateTime startDate=new DateTime(int.Parse(_date[0]),int.Parse(_date[1]),int.Parse(_date[2]));
+        return (date-startDate).Days/7+1;
+    }
+
     public List<Schedule> GetSchedules(DateTime date){
         List<Schedule> list=new List<Schedule>();
         string[] _date=apparence.startDate.Split('-');
