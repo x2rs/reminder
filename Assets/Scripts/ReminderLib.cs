@@ -1,10 +1,12 @@
 using System;
+using System.Diagnostics;
 using System.IO;
+using UnityEditor;
 using UnityEngine;
 
 public static class ReminderLib
 {
-    public static readonly string appDataDir=Application.persistentDataPath+'\\';
+    public static readonly string appDataDir=Application.persistentDataPath;
     public static string dirPath = appDataDir;
 
     
@@ -18,7 +20,21 @@ public static class ReminderLib
         }
     }
 
-    public static void ShowToastNotification(string text){
+    // !only windows!
+    public static void ShowToastNotification(string title,string text){
+        string icon_path="D:\\Program Files (x86)\\Dev-Cpp\\Icons\\Danger.ico";
+        string script_destination="D:\\Extra\\Documents\\UnityPrograms\\reminder\\Assets\\Commands\\push_notification.ps1";
+
+        Process process = new Process();
+        //! 危险，powershell绝对路径
+        process.StartInfo.FileName="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";
+        process.StartInfo.Arguments=$". {script_destination} -title '{title}' -text '{text}' -icon_path '{icon_path}'";
+        process.StartInfo.CreateNoWindow = true;
+        process.StartInfo.ErrorDialog = false;
+        process.StartInfo.UseShellExecute = false;
+        process.Start();
+        process.WaitForExit();
+        process.Close();
     }
 }
 
@@ -193,13 +209,7 @@ class Schedule:
         
         _schedule.arrangement = _arrangement_list
 
-        return _schedule
-    
-    @staticmethod
-    def from_pdf(path:str):
-        with open(path,mode="r",encoding="utf-8") as f:
-            pass
-            
+        return _schedule     
 
     def to_json_dict(self):
         courses=[]
