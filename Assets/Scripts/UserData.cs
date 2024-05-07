@@ -7,6 +7,9 @@ using UnityEngine.UI;
 [Serializable]
 public class UserData{
     public WakeupSchedule wakeupSchedule;
+
+    public string[] globalItem={"笔记本","笔袋","水"};
+
     public static string DataPath{
         get{
             return $"{ReminderLib.dirPath}\\user_data.json";
@@ -54,7 +57,7 @@ public class UserData{
 
 
         List<Schedule> schedules = wakeupSchedule.GetSchedules(date);
-        HashSet<string> set = new HashSet<string>();//去重集合
+        HashSet<string> set = new HashSet<string>(globalItem);//去重集合，先包含globalItem
         foreach (Schedule schedule in schedules)
         {//依据子串放东西
             foreach (KeyValuePair<string, string> pair in courseName2Item)
@@ -80,6 +83,7 @@ public class UserData{
         Weather weather = await weatherTask;
 
         //尝试加载当天的天气！
+        //!todo uv 遮阳帽
         foreach (Weather.WeatherForcast forcast in weather.data.forecast)
         {
             string[] _data = forcast.ymd.Split('-');
