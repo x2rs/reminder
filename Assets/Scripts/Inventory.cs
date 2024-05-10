@@ -27,7 +27,7 @@ public class Item
 [Serializable]
 public struct Lesson
 {
-
+    
 }
 
 public class Inventory

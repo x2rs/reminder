@@ -27,10 +27,10 @@ public class UserData{
         string json=JsonUtility.ToJson(this);
         await File.WriteAllTextAsync(DataPath,json);
     }
-    public static async Task<UserData> Initialize(string wakeup_schedule_path){
+    public static UserData Initialize(string wakeup_schedule_path){
         UserData data = new UserData
         {
-            wakeupSchedule = await WakeupSchedule.FromWakeupFile(wakeup_schedule_path)
+            wakeupSchedule = WakeupSchedule.FromWakeupFile(wakeup_schedule_path)
         };
         return data;
     }
@@ -104,8 +104,8 @@ public class UserData{
         return inventory;
     }
 
-    public async Task LoadWakeupScheduleFromPathAsync(string path){
-        wakeupSchedule=await WakeupSchedule.FromWakeupFile(path);
+    public void LoadWakeupScheduleFromPathAsync(string path){
+        wakeupSchedule=WakeupSchedule.FromWakeupFile(path);
     }
 
 }

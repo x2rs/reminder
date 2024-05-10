@@ -92,8 +92,8 @@ public class WakeupSchedule{
         public int type;
     }
 
-    public async static Task<WakeupSchedule> FromWakeupFile(string path){
-        string _str = await File.ReadAllTextAsync(path);
+    public static WakeupSchedule FromWakeupFile(string path){
+        string _str = File.ReadAllText(path);
 
         //括号栈算法
         int _cnt=0;
