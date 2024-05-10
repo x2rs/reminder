@@ -1,20 +1,42 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ReminderText : MonoBehaviour
 {
     public DateTime date=DateTime.Today;
-    private async void Start() {
-        Main.userData=await UserData.Initialize("D:\\Extra\\Desktop\\example.wakeup_schedule");
+    private void Start() {
+        
+        if(File.Exists(UserData.DataPath)){
+            string _json=File.ReadAllText(UserData.DataPath);
+            Main.userData=JsonUtility.FromJson<UserData>(_json);
+            Main.userData.LoadWakeupSchedule();
+        }else{
+            Main.userData=new UserData();
+        
+        }
         UpdateText();
     }
 
-    private async void UpdateText(){
-        string text="今天是："+Main.userData.wakeupSchedule.ToVeryLongDateColor(DateTime.Now)+'\n';
-        
+    public async void UpdateText(){
+        #if UNITY_ANDROID
+        #endif
+        #if UNITY_STANDALONE_WIN
+        #endif
+        if(Main.userData.wakeupSchedule==null){
+            GetComponent<Text>().text=ReminderLib.ToColorText("找不到Wakeup文件！",Color.red);
+            return;
+        }
+        string text="";
+        try{
+            text="今天是："+Main.userData.wakeupSchedule.ToVeryLongDateColor(DateTime.Now)+'\n';
+        }catch(Exception e){
+            GetComponent<Text>().text=ReminderLib.ToColorText("解析Wakeup文件失败！",Color.red);
+            return;
+        }
 
         Inventory inventory=await Main.userData.GetInventory(date);
         text+="在"+Main.userData.wakeupSchedule.ToVeryLongDateColor(date)+"你需要带"+ReminderLib.ToColorText(inventory.items.Count.ToString(),Color.red)+"件物品：\n";

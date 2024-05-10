@@ -7,12 +7,16 @@ using UnityEngine.UI;
 [Serializable]
 public class UserData{
     public WakeupSchedule wakeupSchedule;
+    //课表位置
+    public string wakeupPath;
 
     public string[] globalItem={"笔记本","笔袋","水"};
+    public UserData(){
 
+    }
     public static string DataPath{
         get{
-            return $"{ReminderLib.dirPath}\\user_data.json";
+            return $"{ReminderLib.dirPath}/user_data.json";
         }
     }
     public static async Task<UserData> LoadData(){
@@ -27,7 +31,7 @@ public class UserData{
         string json=JsonUtility.ToJson(this);
         await File.WriteAllTextAsync(DataPath,json);
     }
-    public static UserData Initialize(string wakeup_schedule_path){
+    public static UserData InitializeByWakeup(string wakeup_schedule_path){
         UserData data = new UserData
         {
             wakeupSchedule = WakeupSchedule.FromWakeupFile(wakeup_schedule_path)
@@ -102,6 +106,13 @@ public class UserData{
 
 
         return inventory;
+    }
+
+    public void LoadWakeupSchedule(){
+        if(File.Exists(wakeupPath)){
+            wakeupSchedule=WakeupSchedule.FromWakeupFile(wakeupPath);   
+        }
+        
     }
 
     public void LoadWakeupScheduleFromPathAsync(string path){

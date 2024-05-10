@@ -125,7 +125,7 @@ public class Weather{
     /// </summary>
     /// <returns>天气对象</returns>
     public async static Task<Weather> GetWeather(){
-        string weather_path=ReminderLib.dirPath+"\\weather.json";
+        string weather_path=ReminderLib.dirPath+"/weather.json";
         Weather weather;
         if(!File.Exists(weather_path)){
             //无缓存文件
