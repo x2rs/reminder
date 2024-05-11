@@ -54,7 +54,8 @@
         "ProjectSettings/": true,
         "UserSettings/": true,
         "temp/": true,
-        "Temp/": true
+        "Temp/": true,
+        "Assets/TextMesh Pro":true
     },
     "dotnet.defaultSolution": "reminder.sln"
 }
