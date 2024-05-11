@@ -110,9 +110,8 @@ public class UserData{
 
     public void LoadWakeupSchedule(){
         if(File.Exists(wakeupPath)){
-            wakeupSchedule=WakeupSchedule.FromWakeupFile(wakeupPath);   
+            wakeupSchedule=WakeupSchedule.FromWakeupFile(wakeupPath);
         }
-        
     }
 
     public void LoadWakeupScheduleFromPathAsync(string path){

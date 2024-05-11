@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class Main : MonoBehaviour{
     public static UserData userData;
     private void OnApplicationQuit() {
-        userData.SaveData();
+        if(userData!=null)
+            userData.SaveData();
     }
     private void Update() {
         #if UNITY_ANDROID
@@ -22,4 +23,5 @@ public class Main : MonoBehaviour{
         Application.Quit();
         #endif
     }
+    
 }

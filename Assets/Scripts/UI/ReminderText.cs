@@ -16,7 +16,6 @@ public class ReminderText : MonoBehaviour
             Main.userData.LoadWakeupSchedule();
         }else{
             Main.userData=new UserData();
-        
         }
         UpdateText();
     }
@@ -26,15 +25,20 @@ public class ReminderText : MonoBehaviour
         #endif
         #if UNITY_STANDALONE_WIN
         #endif
+
+        GetComponent<Text>().text=File.Exists(Main.userData.wakeupPath)+" "+Main.userData.wakeupPath;
+        
+        return;
+
         if(Main.userData.wakeupSchedule==null){
-            GetComponent<Text>().text=ReminderLib.ToColorText("找不到Wakeup文件！",Color.red);
+            GetComponent<Text>().text=ReminderLib.ToColorText("找不到Wakeup文件！"+UserData.DataPath,Color.red);
             return;
         }
         string text="";
         try{
             text="今天是："+Main.userData.wakeupSchedule.ToVeryLongDateColor(DateTime.Now)+'\n';
         }catch(Exception e){
-            GetComponent<Text>().text=ReminderLib.ToColorText("解析Wakeup文件失败！",Color.red);
+            GetComponent<Text>().text=ReminderLib.ToColorText("解析Wakeup文件失败！"+UserData.DataPath,Color.red);
             return;
         }
 
