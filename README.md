@@ -12,12 +12,12 @@ unity场景文件
 C#脚本
 
 - `Inventory.cs`
-- `Main.cs`
-- `ReminderLib.cs`
-- `UserData.cs`
+- `Main.cs`：
+- `ReminderLib.cs`：原本想从python那边照搬功能，但是发现大部分python代码都没用，所以只有一个`ToColorText`是经常用的
+- `UserData.cs`：
 - `WakeupPath.cs`
 - `WakeupSchedule.cs`
-- `Weather.cs`：用于访问天气API
+- `Weather.cs`：用于访问天气API，默认闵行区
 
 ### Scripts/UI
 
