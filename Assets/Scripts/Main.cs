@@ -11,7 +11,7 @@ public class Main : MonoBehaviour{
     }
     private void Update() {
         #if UNITY_ANDROID
-        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Home)){
+        if(Input.GetKeyDown(KeyCode.Escape)){
             QuitApplication();
         }
         #endif
