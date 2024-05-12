@@ -22,6 +22,6 @@ public static class DebugText {
     public static void Log(string text){
         GameObject obj = GameObject.Instantiate(DebugObject,Canvas);
         obj.GetComponent<TextMeshProUGUI>().text=text;
-        GameObject.Destroy(obj,5);
+        GameObject.Destroy(obj,20);
     } 
 }
