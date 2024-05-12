@@ -3,8 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Main附着在场景的第一个对象Main Camera中
+/// </summary>
 public class Main : MonoBehaviour{
     public static UserData userData;
+
+    /// <summary>
+    /// 应用开始时执行
+    /// </summary>
+    private void Start() {
+        
+    }
+
+    /// <summary>
+    /// 应用退出时执行
+    /// </summary>
     private void OnApplicationQuit() {
         if(userData!=null)
             userData.SaveData();
