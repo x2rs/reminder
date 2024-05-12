@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,7 @@ public static class DebugText {
     /// </summary>
     private static Transform Canvas;
     static DebugText(){
-        DebugObject=Resources.Load<GameObject>("Prefabs/DebugText.prefab");
+        DebugObject=Resources.Load<GameObject>("Prefabs/DebugText");
         Canvas=GameObject.Find("Canvas").transform;
     }
     /// <summary>
@@ -20,7 +21,7 @@ public static class DebugText {
     /// <param name="text">输出的字符串</param>
     public static void Log(string text){
         GameObject obj = GameObject.Instantiate(DebugObject,Canvas);
-        obj.GetComponent<Text>().text=text;
+        obj.GetComponent<TextMeshProUGUI>().text=text;
         GameObject.Destroy(obj,5);
     } 
 }
