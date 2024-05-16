@@ -13,13 +13,6 @@ public class Main : MonoBehaviour{
     /// 应用开始时执行
     /// </summary>
     private void Start() {
-        try{
-            string text=File.ReadAllText("/storage/emulated/0/10.wakeup_schedule");
-            DebugText.Log(text);
-        }catch(Exception e){
-            DebugText.Log(e.Message);
-        }
-        
     }
 
     /// <summary>
