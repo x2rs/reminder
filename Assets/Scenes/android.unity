@@ -5430,7 +5430,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1115762880}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.6666667
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5804,6 +5804,7 @@ GameObject:
   - component: {fileID: 2086809302}
   - component: {fileID: 2086809304}
   - component: {fileID: 2086809303}
+  - component: {fileID: 2086809305}
   m_Layer: 5
   m_Name: WeatherText
   m_TagString: Untagged
@@ -5927,6 +5928,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086809301}
   m_CullTransparentMesh: 1
+--- !u!114 &2086809305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086809301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ab832805d08fc44913209db3d4b66f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2109300117
 GameObject:
   m_ObjectHideFlags: 0
