@@ -1,0 +1,793 @@
+{
+    "courseLen": 45,
+    "id": 2,
+    "name": "sjtu",
+    "sameBreakLen": false,
+    "sameLen": true,
+    "theBreakLen": 10
+}
+[
+    {
+        "endTime": "08:45",
+        "node": 1,
+        "startTime": "08:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "09:40",
+        "node": 2,
+        "startTime": "08:55",
+        "timeTable": 2
+    },
+    {
+        "endTime": "10:45",
+        "node": 3,
+        "startTime": "10:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "11:40",
+        "node": 4,
+        "startTime": "10:55",
+        "timeTable": 2
+    },
+    {
+        "endTime": "12:45",
+        "node": 5,
+        "startTime": "12:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "13:40",
+        "node": 6,
+        "startTime": "12:55",
+        "timeTable": 2
+    },
+    {
+        "endTime": "14:45",
+        "node": 7,
+        "startTime": "14:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "15:40",
+        "node": 8,
+        "startTime": "14:55",
+        "timeTable": 2
+    },
+    {
+        "endTime": "16:45",
+        "node": 9,
+        "startTime": "16:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "17:40",
+        "node": 10,
+        "startTime": "16:55",
+        "timeTable": 2
+    },
+    {
+        "endTime": "18:45",
+        "node": 11,
+        "startTime": "18:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "19:40",
+        "node": 12,
+        "startTime": "18:55",
+        "timeTable": 2
+    },
+    {
+        "endTime": "20:45",
+        "node": 13,
+        "startTime": "20:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "21:40",
+        "node": 14,
+        "startTime": "20:55",
+        "timeTable": 2
+    },
+    {
+        "endTime": "22:40",
+        "node": 15,
+        "startTime": "21:55",
+        "timeTable": 2
+    },
+    {
+        "endTime": "22:50",
+        "node": 16,
+        "startTime": "22:05",
+        "timeTable": 2
+    },
+    {
+        "endTime": "23:00",
+        "node": 17,
+        "startTime": "22:15",
+        "timeTable": 2
+    },
+    {
+        "endTime": "23:10",
+        "node": 18,
+        "startTime": "22:25",
+        "timeTable": 2
+    },
+    {
+        "endTime": "23:20",
+        "node": 19,
+        "startTime": "22:35",
+        "timeTable": 2
+    },
+    {
+        "endTime": "23:30",
+        "node": 20,
+        "startTime": "22:45",
+        "timeTable": 2
+    },
+    {
+        "endTime": "23:40",
+        "node": 21,
+        "startTime": "22:55",
+        "timeTable": 2
+    },
+    {
+        "endTime": "23:50",
+        "node": 22,
+        "startTime": "23:05",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:00",
+        "node": 23,
+        "startTime": "23:15",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:00",
+        "node": 24,
+        "startTime": "23:25",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:00",
+        "node": 25,
+        "startTime": "23:35",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:00",
+        "node": 26,
+        "startTime": "23:45",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:00",
+        "node": 27,
+        "startTime": "23:51",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:00",
+        "node": 28,
+        "startTime": "23:56",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 29,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 30,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 31,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 32,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 33,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 34,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 35,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 36,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 37,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 38,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 39,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 40,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 41,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 42,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 43,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 44,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 45,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 46,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 47,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 48,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 49,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 50,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 51,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 52,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 53,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 54,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 55,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 56,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 57,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 58,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 59,
+        "startTime": "00:00",
+        "timeTable": 2
+    },
+    {
+        "endTime": "00:45",
+        "node": 60,
+        "startTime": "00:00",
+        "timeTable": 2
+    }
+]
+{
+    "background": "",
+    "courseTextColor": -1,
+    "id": 1,
+    "itemAlpha": 50,
+    "itemHeight": 64,
+    "itemTextSize": 12,
+    "maxWeek": 20,
+    "nodes": 20,
+    "showOtherWeekCourse": true,
+    "showSat": true,
+    "showSun": true,
+    "showTime": false,
+    "startDate": "2024-2-19",
+    "strokeColor": -2130706433,
+    "sundayFirst": false,
+    "tableName": "未命名",
+    "textColor": -16777216,
+    "timeTable": 1,
+    "type": 0,
+    "widgetCourseTextColor": -1,
+    "widgetItemAlpha": 50,
+    "widgetItemHeight": 64,
+    "widgetItemTextSize": 12,
+    "widgetStrokeColor": -2130706433,
+    "widgetTextColor": -16777216
+}
+[
+    {
+        "color": "#ffff1744",
+        "courseName": "数学分析（荣誉）II◇",
+        "credit": 4.0,
+        "id": 0,
+        "note": "仅限致远工科和选拔学生",
+        "tableId": 1
+    },
+    {
+        "color": "#fffa6278",
+        "courseName": "大学物理(A类）（1）◇",
+        "credit": 4.0,
+        "id": 1,
+        "note": "无",
+        "tableId": 1
+    },
+    {
+        "color": "#ff2979ff",
+        "courseName": "大学英语（4）◇",
+        "credit": 3.0,
+        "id": 2,
+        "note": "无",
+        "tableId": 1
+    },
+    {
+        "color": "#ff1de9b6",
+        "courseName": "程序设计思想与方法（C++）◇",
+        "credit": 4.0,
+        "id": 3,
+        "note": "上机地点：电院机房",
+        "tableId": 1
+    },
+    {
+        "color": "#ffa375ff",
+        "courseName": "概率统计◇",
+        "credit": 3.0,
+        "id": 4,
+        "note": "大班授课模式",
+        "tableId": 1
+    },
+    {
+        "color": "#ffff9100",
+        "courseName": "大学物理实验（1）●",
+        "credit": 1.0,
+        "id": 5,
+        "note": "在学校网站选课后，还需在物理实验教学中心网站进行二次选课（ http://pec.sjtu.edu.cn ），查询具体实验项目、分组，选课后请关注Canvas的课程通知。",
+        "tableId": 1
+    },
+    {
+        "color": "#ffff3d00",
+        "courseName": "思想道德与法治◇",
+        "credit": 3.0,
+        "id": 6,
+        "note": "无",
+        "tableId": 1
+    },
+    {
+        "color": "#ff2196f3",
+        "courseName": "工程学导论◇",
+        "credit": 3.0,
+        "id": 7,
+        "note": "无",
+        "tableId": 1
+    },
+    {
+        "color": "#ff005caf",
+        "courseName": "形势与政策◇",
+        "credit": 0.5,
+        "id": 8,
+        "note": "无",
+        "tableId": 1
+    },
+    {
+        "color": "#ffff1744",
+        "courseName": "攀岩◇",
+        "credit": 1.0,
+        "id": 9,
+        "note": "无",
+        "tableId": 1
+    },
+    {
+        "color": "#fffa6278",
+        "courseName": "新时代社会认知实践◇",
+        "credit": 2.0,
+        "id": 10,
+        "note": "无",
+        "tableId": 1
+    }
+]
+[
+    {
+        "day": 1,
+        "endTime": "",
+        "endWeek": 16,
+        "id": 0,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 上院111",
+        "startNode": 1,
+        "startTime": "",
+        "startWeek": 1,
+        "step": 2,
+        "tableId": 1,
+        "teacher": "向光辉",
+        "type": 0
+    },
+    {
+        "day": 2,
+        "endTime": "",
+        "endWeek": 16,
+        "id": 1,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 上院215",
+        "startNode": 1,
+        "startTime": "",
+        "startWeek": 1,
+        "step": 2,
+        "tableId": 1,
+        "teacher": "刘当波",
+        "type": 0
+    },
+    {
+        "day": 3,
+        "endTime": "",
+        "endWeek": 16,
+        "id": 2,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 中院207",
+        "startNode": 1,
+        "startTime": "",
+        "startWeek": 1,
+        "step": 2,
+        "tableId": 1,
+        "teacher": "潘之欣",
+        "type": 0
+    },
+    {
+        "day": 4,
+        "endTime": "",
+        "endWeek": 15,
+        "id": 3,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 下院212",
+        "startNode": 1,
+        "startTime": "",
+        "startWeek": 1,
+        "step": 2,
+        "tableId": 1,
+        "teacher": "陈谐",
+        "type": 1
+    },
+    {
+        "day": 5,
+        "endTime": "",
+        "endWeek": 15,
+        "id": 4,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 上院100",
+        "startNode": 1,
+        "startTime": "",
+        "startWeek": 1,
+        "step": 2,
+        "tableId": 1,
+        "teacher": "卫淑芝",
+        "type": 1
+    },
+    {
+        "day": 1,
+        "endTime": "",
+        "endWeek": 16,
+        "id": 3,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 下院212",
+        "startNode": 3,
+        "startTime": "",
+        "startWeek": 1,
+        "step": 2,
+        "tableId": 1,
+        "teacher": "陈谐",
+        "type": 0
+    },
+    {
+        "day": 2,
+        "endTime": "",
+        "endWeek": 16,
+        "id": 4,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 上院100",
+        "startNode": 3,
+        "startTime": "",
+        "startWeek": 1,
+        "step": 2,
+        "tableId": 1,
+        "teacher": "卫淑芝",
+        "type": 0
+    },
+    {
+        "day": 3,
+        "endTime": "",
+        "endWeek": 16,
+        "id": 0,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 上院111",
+        "startNode": 3,
+        "startTime": "",
+        "startWeek": 1,
+        "step": 2,
+        "tableId": 1,
+        "teacher": "向光辉",
+        "type": 0
+    },
+    {
+        "day": 4,
+        "endTime": "",
+        "endWeek": 16,
+        "id": 1,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 上院215",
+        "startNode": 3,
+        "startTime": "",
+        "startWeek": 1,
+        "step": 2,
+        "tableId": 1,
+        "teacher": "刘当波",
+        "type": 0
+    },
+    {
+        "day": 5,
+        "endTime": "",
+        "endWeek": 16,
+        "id": 2,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 上院511",
+        "startNode": 3,
+        "startTime": "",
+        "startWeek": 2,
+        "step": 2,
+        "tableId": 1,
+        "teacher": "潘之欣",
+        "type": 2
+    },
+    {
+        "day": 1,
+        "endTime": "",
+        "endWeek": 16,
+        "id": 5,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 不排教室",
+        "startNode": 6,
+        "startTime": "",
+        "startWeek": 10,
+        "step": 3,
+        "tableId": 1,
+        "teacher": "王宇兴",
+        "type": 0
+    },
+    {
+        "day": 2,
+        "endTime": "",
+        "endWeek": 16,
+        "id": 6,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 东上院202",
+        "startNode": 6,
+        "startTime": "",
+        "startWeek": 1,
+        "step": 3,
+        "tableId": 1,
+        "teacher": "王金凤",
+        "type": 0
+    },
+    {
+        "day": 4,
+        "endTime": "",
+        "endWeek": 16,
+        "id": 7,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 中院206",
+        "startNode": 6,
+        "startTime": "",
+        "startWeek": 1,
+        "step": 3,
+        "tableId": 1,
+        "teacher": "李雪松",
+        "type": 0
+    },
+    {
+        "day": 3,
+        "endTime": "",
+        "endWeek": 6,
+        "id": 8,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 上院215",
+        "startNode": 9,
+        "startTime": "",
+        "startWeek": 6,
+        "step": 2,
+        "tableId": 1,
+        "teacher": "戴雨吟",
+        "type": 0
+    },
+    {
+        "day": 3,
+        "endTime": "",
+        "endWeek": 10,
+        "id": 8,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 上院215",
+        "startNode": 9,
+        "startTime": "",
+        "startWeek": 10,
+        "step": 2,
+        "tableId": 1,
+        "teacher": "戴雨吟",
+        "type": 0
+    },
+    {
+        "day": 3,
+        "endTime": "",
+        "endWeek": 15,
+        "id": 8,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 上院215",
+        "startNode": 9,
+        "startTime": "",
+        "startWeek": 14,
+        "step": 2,
+        "tableId": 1,
+        "teacher": "戴雨吟",
+        "type": 0
+    },
+    {
+        "day": 5,
+        "endTime": "",
+        "endWeek": 16,
+        "id": 9,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 未排地点",
+        "startNode": 9,
+        "startTime": "",
+        "startWeek": 1,
+        "step": 2,
+        "tableId": 1,
+        "teacher": "夏杰",
+        "type": 0
+    },
+    {
+        "day": 5,
+        "endTime": "",
+        "endWeek": 16,
+        "id": 3,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 不排教室",
+        "startNode": 11,
+        "startTime": "",
+        "startWeek": 1,
+        "step": 2,
+        "tableId": 1,
+        "teacher": "陈谐",
+        "type": 0
+    },
+    {
+        "day": 6,
+        "endTime": "",
+        "endWeek": 8,
+        "id": 10,
+        "level": 0,
+        "ownTime": false,
+        "room": "闵行 不排教室",
+        "startNode": 11,
+        "startTime": "",
+        "startWeek": 1,
+        "step": 4,
+        "tableId": 1,
+        "teacher": "李劲湘",
+        "type": 0
+    }
+]

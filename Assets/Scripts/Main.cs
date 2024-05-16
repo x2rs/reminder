@@ -13,6 +13,7 @@ public class Main : MonoBehaviour{
     /// 应用开始时执行
     /// </summary>
     private void Start() {
+
     }
 
     /// <summary>

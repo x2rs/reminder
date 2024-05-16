@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Android;
 using UnityEngine.UI;
@@ -24,6 +25,10 @@ public class ReminderText : MonoBehaviour
     public async void UpdateText(){
 
         //!注意！从android 10.0开始，关于Wakeup文件，如果不在data目录，必须用unity调用java，通过android的api才能读取，不能直接读取
+#if UNITY_EDITOR
+        Main.userData.wakeupSchedule=WakeupSchedule.FromWakeupFile(@"D:\Extra\Documents\UnityPrograms\reminder\Assets\example.wakeup_schedule");
+
+#else
 
         try{
             File.Exists(Main.userData.wakeupPath);
@@ -36,6 +41,7 @@ public class ReminderText : MonoBehaviour
             GetComponent<Text>().text=ReminderLib.ToColorText("找不到Wakeup文件！Main.userData.wakeupSchedule==null"+Main.userData.wakeupPath,Color.red);
             return;
         }
+#endif
         string text="";
         text="今天是："+Main.userData.wakeupSchedule.ToVeryLongDateColor(DateTime.Now)+'\n';
 
@@ -48,6 +54,7 @@ public class ReminderText : MonoBehaviour
             ++index;
         }
         GetComponent<Text>().text=text;
+
     }
 
     public void Tomorrow(){
