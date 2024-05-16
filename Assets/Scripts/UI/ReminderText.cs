@@ -23,30 +23,21 @@ public class ReminderText : MonoBehaviour
 
     public async void UpdateText(){
 
-        //!注意！在Android环境下，File.Exists必须用申请权限才能使用
-#if UNITY_ANDROID
-        if (Permission.HasUserAuthorizedPermission(Permission.ExternalStorageRead))
-        {
-            // 权限已被授予
-        }
-        else
-        {
-            // 权限未被授予
-        }
-#endif
+        //!注意！从android 10.0开始，关于Wakeup文件，如果不在data目录，必须用unity调用java，通过android的api才能读取，不能直接读取
 
-        if(Main.userData.wakeupSchedule==null){
-            GetComponent<Text>().text=ReminderLib.ToColorText("找不到Wakeup文件！"+Main.userData.wakeupPath,Color.red);
-            return;
-        }
-        string text="";
         try{
-            GetComponent<Text>().text=File.Exists(Main.userData.wakeupPath)+" "+Main.userData.wakeupPath;
-            text="今天是："+Main.userData.wakeupSchedule.ToVeryLongDateColor(DateTime.Now)+'\n';
+            File.Exists(Main.userData.wakeupPath);
         }catch(Exception e){
             GetComponent<Text>().text=ReminderLib.ToColorText(e.Message,Color.red);
             return;
         }
+
+        if(Main.userData.wakeupSchedule==null){
+            GetComponent<Text>().text=ReminderLib.ToColorText("找不到Wakeup文件！Main.userData.wakeupSchedule==null"+Main.userData.wakeupPath,Color.red);
+            return;
+        }
+        string text="";
+        text="今天是："+Main.userData.wakeupSchedule.ToVeryLongDateColor(DateTime.Now)+'\n';
 
         Inventory inventory=await Main.userData.GetInventory(date);
         text+="在"+Main.userData.wakeupSchedule.ToVeryLongDateColor(date)+"你需要带"+ReminderLib.ToColorText(inventory.items.Count.ToString(),Color.red)+"件物品：\n";

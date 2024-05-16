@@ -9,7 +9,6 @@ using UnityEngine.UI;
 /// </summary>
 public class Main : MonoBehaviour{
     public static UserData userData;
-
     /// <summary>
     /// 应用开始时执行
     /// </summary>
@@ -20,6 +19,7 @@ public class Main : MonoBehaviour{
         }catch(Exception e){
             DebugText.Log(e.Message);
         }
+        
     }
 
     /// <summary>

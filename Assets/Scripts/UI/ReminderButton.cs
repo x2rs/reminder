@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ReminderButton : MonoBehaviour
 {
-    
     private void Start() {
         Button button=GetComponent<Button>();
         button.onClick.AddListener(delegate{
