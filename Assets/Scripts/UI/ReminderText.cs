@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Android;
 using UnityEngine.UI;
 
 public class ReminderText : MonoBehaviour
@@ -21,24 +22,29 @@ public class ReminderText : MonoBehaviour
     }
 
     public async void UpdateText(){
-        #if UNITY_ANDROID
-        #endif
-        #if UNITY_STANDALONE_WIN
-        #endif
 
-        GetComponent<Text>().text=File.Exists(Main.userData.wakeupPath)+" "+Main.userData.wakeupPath;
-        
-        return;
+        //!注意！在Android环境下，File.Exists必须用申请权限才能使用
+#if UNITY_ANDROID
+        if (Permission.HasUserAuthorizedPermission(Permission.ExternalStorageRead))
+        {
+            // 权限已被授予
+        }
+        else
+        {
+            // 权限未被授予
+        }
+#endif
 
         if(Main.userData.wakeupSchedule==null){
-            GetComponent<Text>().text=ReminderLib.ToColorText("找不到Wakeup文件！"+UserData.DataPath,Color.red);
+            GetComponent<Text>().text=ReminderLib.ToColorText("找不到Wakeup文件！"+Main.userData.wakeupPath,Color.red);
             return;
         }
         string text="";
         try{
+            GetComponent<Text>().text=File.Exists(Main.userData.wakeupPath)+" "+Main.userData.wakeupPath;
             text="今天是："+Main.userData.wakeupSchedule.ToVeryLongDateColor(DateTime.Now)+'\n';
         }catch(Exception e){
-            GetComponent<Text>().text=ReminderLib.ToColorText("解析Wakeup文件失败！"+UserData.DataPath,Color.red);
+            GetComponent<Text>().text=ReminderLib.ToColorText(e.Message,Color.red);
             return;
         }
 

@@ -1,12 +1,13 @@
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class WeatherText:MonoBehaviour
 {
-    private Text m_text;
+    private TextMeshProUGUI m_text;
     private void Awake() {
-        m_text=GetComponent<Text>();
+        m_text=GetComponent<TextMeshProUGUI>();
     }
     private async void OnEnable() {
         Task<Weather> weatherTask=Weather.GetWeather();

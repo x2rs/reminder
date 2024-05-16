@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +14,12 @@ public class Main : MonoBehaviour{
     /// 应用开始时执行
     /// </summary>
     private void Start() {
-        
+        try{
+            string text=File.ReadAllText("/storage/emulated/0/10.wakeup_schedule");
+            DebugText.Log(text);
+        }catch(Exception e){
+            DebugText.Log(e.Message);
+        }
     }
 
     /// <summary>
@@ -23,6 +29,8 @@ public class Main : MonoBehaviour{
         if(userData!=null)
             userData.SaveData();
     }
+
+    
     private void Update() {
         #if UNITY_ANDROID
         if(Input.GetKeyDown(KeyCode.Escape)){
@@ -30,6 +38,10 @@ public class Main : MonoBehaviour{
         }
         #endif
     }
+
+    /// <summary>
+    /// 调用以退出程序
+    /// </summary>
     private void QuitApplication(){
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;

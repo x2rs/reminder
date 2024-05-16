@@ -20,6 +20,7 @@ public static class ReminderLib
         }
     }
 
+#if UNITY_STANDALONE_WIN
     // !only windows!
     public static void ShowToastNotification(string title,string text){
         string icon_path="D:\\Program Files (x86)\\Dev-Cpp\\Icons\\Danger.ico";
@@ -36,4 +37,5 @@ public static class ReminderLib
         process.WaitForExit();
         process.Close();
     }
+#endif
 }
