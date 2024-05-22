@@ -20,9 +20,9 @@ public class FontChanger : MonoBehaviour
             ChangeFontSize();
         }
     }
-    private const float BIG=100;
-    private const float MIDDLE=67;
-    private const float SMALL=33;
+    private const float BIG=70;
+    private const float MIDDLE=50;
+    private const float SMALL=30;
     private TMP_Dropdown dropdown;
     private void Start() {
         dropdown=GetComponent<TMP_Dropdown>();

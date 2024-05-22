@@ -15,7 +15,9 @@ public class NotificationManager : MonoBehaviour
 
     void Start()
     {
+
         InitializeAndroidNotifications();
+        ScheduleNotification("提醒带全物品！","你今天要带666个物品",DateTime.Today+new TimeSpan(20,1,0));
     }
 
     private void InitializeAndroidNotifications()
