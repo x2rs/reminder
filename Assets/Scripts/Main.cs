@@ -20,11 +20,17 @@ public class Main : MonoBehaviour{
     public static List<TextMeshProUGUI> allGlobalTMPs = new List<TextMeshProUGUI>();
 
     /// <summary>
-    /// 应用开始时执行
+    /// Awake时机初始化
     /// </summary>
-    private void Start() {
+    private void Awake() {
         canvas=GameObject.Find("Canvas");
         GetTextAndTMPInChildrenIncludingInactive(canvas);
+        FontChanger.ChangeFontSize();
+    }
+    /// <summary>
+    /// Start时机初始化
+    /// </summary>
+    private void Start(){
     }
 
     /// <summary>

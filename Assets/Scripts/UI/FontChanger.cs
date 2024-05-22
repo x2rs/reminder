@@ -27,7 +27,6 @@ public class FontChanger : MonoBehaviour
     private void Start() {
         dropdown=GetComponent<TMP_Dropdown>();
         dropdown.onValueChanged.AddListener(delegate { OnDropdownValueChanged(dropdown.value); });
-        ChangeFontSize();
     }
     /// <summary>
     /// 静态改字体
