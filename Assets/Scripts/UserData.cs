@@ -9,7 +9,9 @@ public class UserData{
     public WakeupSchedule wakeupSchedule;
     //课表位置
     public string wakeupPath;
-
+    /// <summary>
+    /// 全局必带的物品
+    /// </summary>
     public string[] globalItem={"笔记本","笔袋","水"};
     public UserData(){
 
@@ -58,7 +60,6 @@ public class UserData{
 
         //?默认启动天气系统，异步获取天气
         Task<Weather> weatherTask = Weather.GetWeather();
-
 
         List<Schedule> schedules = wakeupSchedule.GetSchedules(date);
         HashSet<string> set = new HashSet<string>(globalItem);//去重集合，先包含globalItem
