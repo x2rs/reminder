@@ -15,9 +15,8 @@ public class NotificationManager : MonoBehaviour
 
     void Start()
     {
-
         InitializeAndroidNotifications();
-        ScheduleNotification("提醒带全物品！","你今天要带666个物品",DateTime.Today+new TimeSpan(20,1,0));
+        ScheduleNotification("提醒带全物品！","你今天要带666个物品",DateTime.Today+new TimeSpan(21));
     }
 
     private void InitializeAndroidNotifications()
@@ -26,7 +25,7 @@ public class NotificationManager : MonoBehaviour
         {
             Id = channelId,
             Name = channelName,
-            Importance = Importance.Default,
+            Importance = Importance.High,
             Description = channelDescription,
         };
         AndroidNotificationCenter.RegisterNotificationChannel(channel);
