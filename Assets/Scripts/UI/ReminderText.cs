@@ -16,7 +16,15 @@ public class ReminderText : MonoBehaviour
             string _json=File.ReadAllText(UserData.DataPath);
             Main.userData=JsonUtility.FromJson<UserData>(_json);
             Main.userData.LoadWakeupSchedule();
-        }else{
+        }
+#if UNITY_WINDOWS
+        // windows下备选debug.wakeup_schedule
+        const string DEBUG_WAKEUP_PATH = "./debug.wakeup_schedule";
+        else if(File.Exists(DEBUG_WAKEUP_PATH)){
+            Main.userData=UserData.InitializeByWakeup(DEBUG_WAKEUP_PATH);
+        }
+#endif       
+        else{
             Main.userData=new UserData();
         }
         UpdateText();
