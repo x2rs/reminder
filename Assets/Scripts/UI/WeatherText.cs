@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
@@ -11,30 +12,26 @@ public class WeatherText : MonoBehaviour
     private void Awake()
     {
         m_text = GetComponent<TextMeshProUGUI>();
-        cityDropdown = GetComponent<TMP_Dropdown>();
+        Debug.Log(cityDropdown);
         cityDropdown.onValueChanged.AddListener(delegate { OnCityDropdownValueChanged(cityDropdown.value); });
+        //初始化城市选项，我写的有点逆天了
+        List<string> options=new List<string>();
+        foreach(WeatherCity city in Weather.cities){
+            options.Add(city.cityName);
+        }
+        cityDropdown.AddOptions(options);
+    }
+
+    private async void Start(){
+        Weather weather=await Weather.GetWeather(Main.userData.cityCode);
+        DisplayWeather(weather);
     }
 
     public async void OnCityDropdownValueChanged(int value)
     {
         Weather weather;
-
-        switch (value)
-        {
-            case 0:
-                weather = await Main.userData.GetMinhangWeather();
-                break;
-            case 1:
-                weather = await Main.userData.GetYangpuWeather();
-                break;
-            case 2:
-                weather = await Main.userData.GetXuhuiWeather();
-                break;
-            default:
-                weather = await Main.userData.GetMinhangWeather();
-                break;
-        }
-
+        weather = await Weather.GetWeatherByDropdownValue(value);
+        Main.userData.cityCode=Weather.cities[value].cityCode;
         DisplayWeather(weather);
     }
 

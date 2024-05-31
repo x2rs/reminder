@@ -1862,7 +1862,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -3070,13 +3070,7 @@ MonoBehaviour:
   m_ItemImage: {fileID: 0}
   m_Value: 0
   m_Options:
-    m_Options:
-    - m_Text: "\u4E0A\u6D77\u5E02 \u95F5\u884C\u533A"
-      m_Image: {fileID: 0}
-    - m_Text: "\u4E0A\u6D77\u5E02 \u6768\u6D66\u533A"
-      m_Image: {fileID: 0}
-    - m_Text: "\u4E0A\u6D77\u5E02 \u5F90\u6C47\u533A"
-      m_Image: {fileID: 0}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6625,6 +6619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ab832805d08fc44913209db3d4b66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cityDropdown: {fileID: 631034365}
 --- !u!1 &2109300117
 GameObject:
   m_ObjectHideFlags: 0

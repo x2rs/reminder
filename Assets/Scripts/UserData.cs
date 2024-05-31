@@ -9,14 +9,13 @@ public class UserData{
     public WakeupSchedule wakeupSchedule;
     //课表位置
     public string wakeupPath;
-    public string cityCode = "101020200";
+    //默认闵行区
+    public int cityCode = 101020200;
     /// <summary>
     /// 全局必带的物品
     /// </summary>
     public string[] globalItem={"笔记本","笔袋","水"};
-    public UserData(){
-
-    }
+    public UserData(){}
     public static string DataPath{
         get{
             return $"{ReminderLib.dirPath}/user_data.json";
@@ -55,27 +54,6 @@ public class UserData{
         {"形势与政策",""},
         {"攀岩","水"}
     };
-
-    public Task<Weather> GetMinhangWeather()
-    {
-        cityCode = null;
-        cityCode = "101020200";
-        return Weather.GetWeather("101020200");
-    }
-
-    public Task<Weather> GetYangpuWeather()
-    {
-        cityCode = null;
-        cityCode = "101021400";
-        return Weather.GetWeather("101021400");
-    }
-
-    public Task<Weather> GetXuhuiWeather()
-    {
-        cityCode = null;
-        cityCode = "101020500";
-        return Weather.GetWeather("101020500");
-    }
 
     public async Task<Inventory> GetInventory(DateTime date)
     {
