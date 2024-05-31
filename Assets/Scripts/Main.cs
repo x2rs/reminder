@@ -26,6 +26,23 @@ public class Main : MonoBehaviour{
         canvas=GameObject.Find("Canvas");
         GetTextAndTMPInChildrenIncludingInactive(canvas);
         FontChanger.ChangeFontSize();
+
+        
+        if(File.Exists(UserData.DataPath)){
+            string _json=File.ReadAllText(UserData.DataPath);
+            userData=JsonUtility.FromJson<UserData>(_json);
+            userData.LoadWakeupSchedule();
+        }
+#if UNITY_WINDOWS
+        // windows下备选debug.wakeup_schedule
+        const string DEBUG_WAKEUP_PATH = "./debug.wakeup_schedule";
+        else if(File.Exists(DEBUG_WAKEUP_PATH)){
+            Main.userData=UserData.InitializeByWakeup(DEBUG_WAKEUP_PATH);
+        }
+#endif       
+        else{
+            userData=new UserData();
+        }
     }
     /// <summary>
     /// Start时机初始化

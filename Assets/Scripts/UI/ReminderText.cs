@@ -9,24 +9,9 @@ using UnityEngine.UI;
 
 public class ReminderText : MonoBehaviour
 {
-    public DateTime date=DateTime.Today;
+    public static DateTime date=DateTime.Today;
+    public Transform calendarText;
     private void Start() {
-        
-        if(File.Exists(UserData.DataPath)){
-            string _json=File.ReadAllText(UserData.DataPath);
-            Main.userData=JsonUtility.FromJson<UserData>(_json);
-            Main.userData.LoadWakeupSchedule();
-        }
-#if UNITY_WINDOWS
-        // windows下备选debug.wakeup_schedule
-        const string DEBUG_WAKEUP_PATH = "./debug.wakeup_schedule";
-        else if(File.Exists(DEBUG_WAKEUP_PATH)){
-            Main.userData=UserData.InitializeByWakeup(DEBUG_WAKEUP_PATH);
-        }
-#endif       
-        else{
-            Main.userData=new UserData();
-        }
         UpdateText();
     }
 
@@ -34,8 +19,7 @@ public class ReminderText : MonoBehaviour
 
         //!注意！从android 10.0开始，关于Wakeup文件，如果不在data目录，必须用unity调用java，通过android的api才能读取，不能直接读取
 #if UNITY_EDITOR
-        Main.userData.wakeupSchedule=WakeupSchedule.FromWakeupFile(@"D:\Extra\Documents\UnityPrograms\reminder\Assets\example.wakeup_schedule");
-
+        
 #else
 
         try{
@@ -68,10 +52,12 @@ public class ReminderText : MonoBehaviour
     public void Tomorrow(){
         date=date.AddDays(1);
         UpdateText();
+        calendarText.GetComponent<CalenderText>().UpdateText();
     }
 
     public void Yesterday(){
         date=date.AddDays(-1);
         UpdateText();
+        calendarText.GetComponent<CalenderText>().UpdateText();
     }
 }
