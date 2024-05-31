@@ -9,6 +9,7 @@ public class UserData{
     public WakeupSchedule wakeupSchedule;
     //课表位置
     public string wakeupPath;
+    public string cityCode = "101020200";
     /// <summary>
     /// 全局必带的物品
     /// </summary>
@@ -54,12 +55,34 @@ public class UserData{
         {"形势与政策",""},
         {"攀岩","水"}
     };
+
+    public Task<Weather> GetMinhangWeather()
+    {
+        cityCode = null;
+        cityCode = "101020200";
+        return Weather.GetWeather("101020200");
+    }
+
+    public Task<Weather> GetYangpuWeather()
+    {
+        cityCode = null;
+        cityCode = "101021400";
+        return Weather.GetWeather("101021400");
+    }
+
+    public Task<Weather> GetXuhuiWeather()
+    {
+        cityCode = null;
+        cityCode = "101020500";
+        return Weather.GetWeather("101020500");
+    }
+
     public async Task<Inventory> GetInventory(DateTime date)
     {
         Inventory inventory = new Inventory();
 
         //?默认启动天气系统，异步获取天气
-        Task<Weather> weatherTask = Weather.GetWeather();
+        Task<Weather> weatherTask = Weather.GetWeather(cityCode);
 
         List<Schedule> schedules = wakeupSchedule.GetSchedules(date);
         HashSet<string> set = new HashSet<string>(globalItem);//去重集合，先包含globalItem
