@@ -176,7 +176,7 @@ public class WakeupSchedule{
                 Schedule schedule = new Schedule
                 {
                     startTime = timeIntervals[arrangement.startNode, 0],
-                    endTime = timeIntervals[arrangement.startNode + arrangement.step, 1],
+                    endTime = timeIntervals[arrangement.startNode + arrangement.step - 1, 1],
                     name = course.courseName,
                     place = arrangement.room
                 };
