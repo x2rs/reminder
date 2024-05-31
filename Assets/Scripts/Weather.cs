@@ -21,8 +21,8 @@ public class Weather{
     //城市代码转成城市名称
     public static WeatherCity[] cities={
         new WeatherCity(101020200,"上海市 闵行区"),
-        new WeatherCity(101020500,"上海市 徐汇区"),
-        new WeatherCity(101021400,"上海市 杨浦区"),
+        new WeatherCity(101021200,"上海市 徐汇区"),
+        new WeatherCity(101021700,"上海市 杨浦区"),
     };
 
     /// <summary>
