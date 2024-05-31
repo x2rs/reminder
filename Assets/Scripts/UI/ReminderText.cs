@@ -52,12 +52,12 @@ public class ReminderText : MonoBehaviour
     public void Tomorrow(){
         date=date.AddDays(1);
         UpdateText();
-        calendarText.GetComponent<CalenderText>().UpdateText();
+        calendarText.GetComponent<CalendarText>().UpdateText();
     }
 
     public void Yesterday(){
         date=date.AddDays(-1);
         UpdateText();
-        calendarText.GetComponent<CalenderText>().UpdateText();
+        calendarText.GetComponent<CalendarText>().UpdateText();
     }
 }

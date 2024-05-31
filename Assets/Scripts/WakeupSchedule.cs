@@ -154,9 +154,6 @@ public class WakeupSchedule{
         int week=span.Days/7+1;
         int day_of_week=(int)date.DayOfWeek;
 
-        Debug.Log(week);
-        Debug.Log(day_of_week);
-
         foreach(Arrangement arrangement in arrangements){
             if(arrangement.day==day_of_week){//星期几是否匹配
                 //是否本周

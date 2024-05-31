@@ -119,4 +119,13 @@ public class UserData{
         wakeupSchedule=WakeupSchedule.FromWakeupFile(path);
     }
 
+    public string GetScheduleString(DateTime date){
+        List<Schedule> list=wakeupSchedule.GetSchedules(date);
+        string res=Main.userData.wakeupSchedule.ToVeryLongDateColor(date)+"\n";
+        foreach(Schedule schedule in list){
+            res+=schedule.name+" "+schedule.startTime+" "+schedule.endTime+"\n";
+        }
+        return res;
+    }
+
 }
