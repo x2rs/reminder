@@ -96,14 +96,14 @@ public class Weather{
         return cityInfo+"\n更新时间："+date+" "+cityInfo.updateTime+"\n"+data.forecast[0];
     }
 
-    private const string m_url="http://t.weather.sojson.com/api/weather/city/101020200";
     /// <summary>
     /// 直接从服务器获取天气
     /// <br />
     /// 天气信息的获取上限是每分钟300次，超过会禁用一小时，数据每8小时更新一次
     /// </summary>
     /// <returns>天气json字符串</returns>
-    private async static Task<string> RequestWeatherString(){//
+    private async static Task<string> RequestWeatherString(string cityCode){
+        string m_url="http://t.weather.sojson.com/api/weather/city/" + cityCode;
         HttpClient httpClient=new();
         try{
             string jsonContent=await httpClient.GetStringAsync(m_url);
@@ -124,12 +124,12 @@ public class Weather{
     /// 获取天气对象，自带缓存
     /// </summary>
     /// <returns>天气对象</returns>
-    public async static Task<Weather> GetWeather(){
-        string weather_path=ReminderLib.dirPath+"/weather.json";
+    public async static Task<Weather> GetWeather(string cityCode){
+        string weather_path = ReminderLib.dirPath + "/weather.json";
         Weather weather;
         if(!File.Exists(weather_path)){
             //无缓存文件
-            string jsonContent=await RequestWeatherString();
+            string jsonContent=await RequestWeatherString(cityCode);
             weather=JsonUtility.FromJson<Weather>(jsonContent);
             switch(weather.status){
                 case WeatherRequestStatus.Success:
@@ -146,8 +146,8 @@ public class Weather{
             DateTime date=DateTime.ParseExact(weather.date,"yyyyMMdd", System.Globalization.CultureInfo.CurrentCulture);
             TimeSpan updateTime=TimeSpan.ParseExact(weather.cityInfo.updateTime,"h\\:mm",System.Globalization.CultureInfo.CurrentCulture);
             //检测是否大于8小时
-            if (DateTime.Now-(date+updateTime)>new TimeSpan(8,0,0)){
-                jsonContent=await RequestWeatherString();
+            if (DateTime.Now-(date+updateTime)>new TimeSpan(1,0,0)){
+                jsonContent=await RequestWeatherString(cityCode);
                 Weather newWeather=JsonUtility.FromJson<Weather>(jsonContent);
                 if(newWeather.status == WeatherRequestStatus.Success){
                     //保存
