@@ -19,7 +19,10 @@ public class Item
     }
     public string ToText()
     {
-        return ReminderLib.ToColorText(name, color);
+        return name;
+    }
+    public string ToColorfulText(){
+        return ReminderLib.ToColorText(name,color);
     }
 }
 

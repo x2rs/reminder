@@ -42,7 +42,6 @@ public class ReminderText : MonoBehaviour
         int index=1;
         foreach(Item item in inventory.items){
             text+=index.ToString()+"."+item.ToText()+'\n';
-
             ++index;
         }
         GetComponent<Text>().text=text;
